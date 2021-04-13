@@ -14,7 +14,7 @@ class CreateEtablissementsTable extends Migration
     public function up()
     {
         Schema::create('etablissements', function (Blueprint $table) {
-            $table->bigIncrements('idEtab');
+            $table->bigIncrements('id');
             $table->string('nomEtab',25);
             $table->string('adrueEtab',25);
             $table->string('cpEtab',5);

@@ -11,7 +11,7 @@
 </head>
 <div class="navbar">
   <a href="index.php">Accueil</a>
-  <a href="listeEtablissements.php">Gestion</a>
+  <a href="{{route('etablissement.index')}}">Liste des établissements</a>
   <a href="consultationAttributions.php">Attributions</a>
 </div>
 <div class="main">

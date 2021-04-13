@@ -14,7 +14,7 @@ class CreateEquipesTable extends Migration
     public function up()
     {
         Schema::create('equipes', function (Blueprint $table) {
-          $table->bigIncrements('idEquipe');
+          $table->bigIncrements('id');
           $table->string('nomEquipe',25);
           $table->string('responsableEquipe',50);
           $table->string('nombreMembreEquipe');
