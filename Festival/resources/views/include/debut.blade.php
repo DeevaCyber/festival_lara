@@ -10,9 +10,10 @@
 
 </head>
 <div class="navbar">
-  <a href="index.php">Accueil</a>
+  <a href="{{route('home.index')}}">Home</a>
   <a href="{{route('etablissement.index')}}">Liste des établissements</a>
-  <a href="consultationAttributions.php">Attributions</a>
+  <a href="{{route('equipe.index')}}">Liste des équipes</a>
+  <a href="consultationAttributions.php">Liste des attributions</a>
 </div>
 <div class="main">
 <!--  Tableau contenant le titre et le logo-->

@@ -99,7 +99,7 @@ class EtablissementController extends Controller
           'nbChambresOffertes' => 'required',
         ]);
 
-        $post->update($request->all());
+        $etablissement->update($request->all());
 
         return redirect()->route('etablissement.index')
                         ->with('success','Etablissement updated successfully');
@@ -108,12 +108,12 @@ class EtablissementController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Post  $post
+     * @param  \App\Models\Etablissement  $etablissement
      * @return \Illuminate\Http\Response
      */
     public function destroy(Etablissement $etablissement)
     {
-        $post->delete();
+        $etablissement->delete();
 
         return redirect()->route('etablissement.index')
                         ->with('success','Etablissement deleted successfully');

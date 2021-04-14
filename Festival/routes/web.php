@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EtablissementController;
+use App\Http\Controllers\EquipeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +17,9 @@ use App\Http\Controllers\EtablissementController;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('home.index');
 });
 
+Route::resource('home',HomeController::class);
 Route::resource('etablissement',EtablissementController::class);
+Route::resource('equipe',EquipeController::class);
