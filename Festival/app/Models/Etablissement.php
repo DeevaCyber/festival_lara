@@ -9,4 +9,9 @@ class Etablissement extends Model
 {
     use HasFactory;
     protected $fillable = ['nomEtab','adrueEtab','cpEtab','villeEtab','telEtab', 'mailEtab','nomResponsable','prenomResponsable','nbChambresOffertes'];
+    public function attributions()
+    {
+      return $this->hasMany(Attribution::class);
+    }
+
 }

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EtablissementController;
 use App\Http\Controllers\EquipeController;
+use App\Http\Controllers\AttributionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +24,4 @@ Route::get('/', function () {
 Route::resource('home',HomeController::class);
 Route::resource('etablissement',EtablissementController::class);
 Route::resource('equipe',EquipeController::class);
+Route::resource('attribution',AttributionController::class);

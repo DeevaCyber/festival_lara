@@ -9,4 +9,9 @@ class Equipe extends Model
 {
     use HasFactory;
     protected $fillable = ['nomEquipe','responsableEquipe','nombreMembreEquipe','paysEquipe'];
+
+    public function attributions()
+    {
+      return $this->hasMany(Attribution::class);
+    }
 }

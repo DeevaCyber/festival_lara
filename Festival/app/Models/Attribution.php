@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Attribution extends Model
 {
     use HasFactory;
-    protected $fillable = ['nombreChambre'];
+    protected $fillable = ['etablissements_idEtab','equipes_idEquipe'];
 }

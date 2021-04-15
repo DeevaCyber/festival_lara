@@ -15,7 +15,6 @@ class CreateAttributionsTable extends Migration
     {
         Schema::create('attributions', function (Blueprint $table) {
           $table->bigIncrements('id');
-          $table->string('nombreChambre');
           $table->foreignId('etablissements_idEtab');
           $table->foreignId('equipes_idEquipe');
           $table->timestamps();

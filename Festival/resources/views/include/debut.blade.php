@@ -13,7 +13,7 @@
   <a href="{{route('home.index')}}">Home</a>
   <a href="{{route('etablissement.index')}}">Liste des établissements</a>
   <a href="{{route('equipe.index')}}">Liste des équipes</a>
-  <a href="consultationAttributions.php">Liste des attributions</a>
+  <a href="{{route('attribution.index')}}">Liste des attributions</a>
 </div>
 <div class="main">
 <!--  Tableau contenant le titre et le logo-->
