@@ -61,15 +61,15 @@ class AttributionController extends Controller
      */
     public function show(Attribution $attribution)
     {
-      $etab = DB::table('attributions')
-                  ->join('etablissements','attributions.etablissements_idEtab','=','etablissements.id')
-                  ->where('etablissements.id','=',$attribution)
-                  ->select('etablissements.nomEtab')
+      $etab = DB::table('etablissements')
+                  ->join('attributions','attributions.etablissements_idEtab','=','etablissements.id')
+                  ->where('etablissements.id','=',$attribution->id)
+                  ->select('nomEtab')
                   ->get();
-      $equipe = DB::table('attributions')
-                  ->join('equipes','attributions.equipes_idEquipe','=','equipes.id')
-                  ->where('equipes.id','=',$attribution)
-                  ->select('equipes.nomEquipe')
+      $equipe = DB::table('equipes')
+                  ->join('attributions','attributions.equipes_idEquipe','=','equipes.id')
+                  ->where('equipes.id','=',$attribution->id)
+                  ->select('nomEquipe')
                   ->get();
         return view('attribution.show',compact('attribution','etab','equipe'));
     }
