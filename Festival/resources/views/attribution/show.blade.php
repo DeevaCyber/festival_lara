@@ -2,14 +2,19 @@
 
 <table class='styled-table' width='60%' cellspacing='0' cellpadding='0' align='center'>
   <thead>
-    <td>Informations sur l'attribution</td>
+    <td>Informations sur l'attribution n°{{$attribution -> id}}</td>
   </thead>
   <tbody>
   <td>
-      <strong>Nom de l'établissement:</strong> {{$etab}}
+    @foreach($etab as $etabs)
+      <strong>Nom de l'établissement:</strong> {{$etabs -> nomEtab}}
       <br>
-      <strong>Nom de l'équipe:</strong> {{$equipe}}
+    @endforeach
+
+    @foreach($equipe as $equipes)
+      <strong>Nom de l'équipe:</strong> {{$equipes -> nomEquipe}}
       <br>
+    @endforeach
   </td>
   </tbody>
 </table>

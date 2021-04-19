@@ -20,19 +20,19 @@
     <form action="{{route('attribution.store')}}" method="post">
       @csrf
       <strong>Etablissement:</strong>
-      <select name="etablissements_id">
+      <select name="etablissements_idEtab">
         @if ($etab->count())
           @foreach($etab as $etabs)
-            <option value={{ $etabs->id }}" >{{ $etabs->nomEtab }}</option>
+            <option value="{{ $etabs->id }}" >{{ $etabs->nomEtab }}</option>
           @endforeach
         @endif
       </select>
       <br>
       <strong>Equipe:</strong>
-      <select name="equipes_id">
+      <select name="equipes_idEquipe">
         @if ($equipe->count())
           @foreach($equipe as $equipes)
-            <option value={{ $equipes->id }}">{{ $equipes->nomEquipe }}</option>
+            <option value="{{ $equipes->id }}">{{ $equipes->nomEquipe }}</option>
           @endforeach
         @endif
       </select>

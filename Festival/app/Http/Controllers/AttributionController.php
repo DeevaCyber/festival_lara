@@ -43,8 +43,8 @@ class AttributionController extends Controller
     public function store(Request $request)
     {
       $request->validate([
-         'etablissements_idEtab' => 'require',
-         'equipes_idEquipe' => 'require'
+         'etablissements_idEtab' => 'required',
+         'equipes_idEquipe' => 'required'
      ]);
 
      Attribution::create($request->all());
@@ -63,12 +63,12 @@ class AttributionController extends Controller
     {
       $etab = DB::table('etablissements')
                   ->join('attributions','attributions.etablissements_idEtab','=','etablissements.id')
-                  ->where('etablissements.id','=',$attribution->id)
+                  ->where('attributions.id','=',$attribution->id)
                   ->select('nomEtab')
                   ->get();
       $equipe = DB::table('equipes')
                   ->join('attributions','attributions.equipes_idEquipe','=','equipes.id')
-                  ->where('equipes.id','=',$attribution->id)
+                  ->where('attributions.id','=',$attribution->id)
                   ->select('nomEquipe')
                   ->get();
         return view('attribution.show',compact('attribution','etab','equipe'));
@@ -97,8 +97,8 @@ class AttributionController extends Controller
     public function update(Request $request, Attribution $attribution)
     {
       $request->validate([
-        'etablissements_idEtab' => 'require',
-        'equipes_idEquipe' => 'require'
+        'etablissements_idEtab' => 'required',
+        'equipes_idEquipe' => 'required'
       ]);
 
       $attribution->update($request->all());
