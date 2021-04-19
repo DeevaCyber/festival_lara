@@ -13,7 +13,7 @@
 
 <table class='styled-table' width='60%' cellspacing='0' cellpadding='0' align='center'>
   <thead>
-    <td>Entrez les informations du nouvel établissement</td>
+    <td>Entrez les informations de la nouvelle équipe</td>
   </thead>
   <tbody>
     <td>

@@ -2,7 +2,7 @@
 
 <table class='styled-table' width='60%' cellspacing='0' cellpadding='0' align='center'>
   <thead>
-    <td>Informations sur l'établissement</td>
+    <td>Informations sur l'équipe</td>
   </thead>
   <tbody>
   <td>

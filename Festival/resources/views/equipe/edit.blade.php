@@ -13,7 +13,7 @@
 
 <table class='styled-table' width='60%' cellspacing='0' cellpadding='0' align='center'>
   <thead>
-    <td>Mettez à jour l'établissement</td>
+    <td>Mettez à jour l'équipe</td>
   </thead>
   <tbody>
     <td>
